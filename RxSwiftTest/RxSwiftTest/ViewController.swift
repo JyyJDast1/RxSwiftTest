@@ -31,45 +31,50 @@ class ViewController: UIViewController {
 //        testReplaySub()
         
         //当观察者对 BehaviorSubject 进行订阅时，它会将源 Observable 中最新的元素发送出来（如果不存在最新的元素，就发出默认元素）。然后将随后产生的元素发送出来
-        //类似：replay()(bufferSize: 1) + 一手订阅者接默认值
+        //类似：replay()(bufferSize: 1) + 第一批订阅者接默认值
         testBehaviorSub()
     }
     
     func testBehaviorSub(){
-           let lS = BehaviorSubject<String>(value: "defalut")
-           
-           lS.subscribe(onNext: { (str) in
-               print("sub1:" + "\(str)")
-           }, onError: { (err) in
-               print(err)
-           }, onCompleted: {
-               print("sub1 complete")
-           })
-               .disposed(by: disposeBag)
-           
-           //1
-           lS.onNext("0")
-           lS.onNext("1")
-           
-           //2
-           let test = false
-           if test {
-               lS.onError(DataError.someErr)
-               lS.onNext("6")
-           }
-           
-           lS.subscribe(onNext: { (str) in
-               print("sub2:" + "\(str)")
-           }, onError: { (err) in
-               print(err)
-           }, onCompleted: {
-               print("sub2 complete")
-           })
-               .disposed(by: disposeBag)
-           
-           lS.onNext("2")
-           lS.onCompleted()
-       }
+        let lS = BehaviorSubject<String>(value: "defalut")
+        
+        let _ = lS.delay(RxTimeInterval.seconds(2), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { (str) in
+                print(str)
+            })
+        
+        lS.subscribe(onNext: { (str) in
+            print("sub1:" + "\(str)")
+        }, onError: { (err) in
+            print(err)
+        }, onCompleted: {
+            print("sub1 complete")
+        })
+            .disposed(by: disposeBag)
+        
+        //1
+        lS.onNext("0")
+        lS.onNext("1")
+        
+        //2
+        let test = false
+        if test {
+            lS.onError(DataError.someErr)
+            lS.onNext("6")
+        }
+        
+        lS.subscribe(onNext: { (str) in
+            print("sub2:" + "\(str)")
+        }, onError: { (err) in
+            print(err)
+        }, onCompleted: {
+            print("sub2 complete")
+        })
+            .disposed(by: disposeBag)
+        
+        lS.onNext("2")
+        lS.onCompleted()
+    }
     
       func testReplaySub(){
         let lS = ReplaySubject<String>.create(bufferSize: 1)
