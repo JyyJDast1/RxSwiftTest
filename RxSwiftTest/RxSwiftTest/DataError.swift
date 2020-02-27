@@ -7,9 +7,14 @@
 //
 
 import Foundation
+//
+////解决了Use of unresolved identifier 'DataError' 报错问题
+//struct DataError {
+//    static var cantParseJSON: Error = NSError.init(domain: "fail,cantParseJSON", code: 400, userInfo: nil)
+//}
 
-//解决了Use of unresolved identifier 'DataError' 报错问题
-struct DataError {
-    static var cantParseJSON: Error = NSError.init(domain: "fail,cantParseJSON", code: 400, userInfo: nil)
+
+enum DataError: Error{
+    case cantParseJSON 
 }
 
