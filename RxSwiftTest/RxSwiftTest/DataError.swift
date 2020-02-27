@@ -15,6 +15,7 @@ import Foundation
 
 
 enum DataError: Error{
-    case cantParseJSON 
+    case cantParseJSON
+    case someErr
 }
 
