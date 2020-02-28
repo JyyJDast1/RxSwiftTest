@@ -26,10 +26,6 @@ class ViewController: UIViewController {
                 self.downTest0()
         }
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-       
-    }
 
     /*返回eg：
      {"channels":[{"name_en":"Personal Radio","seq_id":0,"abbr_en":"My","name":"私人兆赫","channel_id":0},{"name":"华语","seq_id":0,"abbr_en":"","channel_id":"1","name_en":""},{"name":"欧美","seq_id":1,"abbr_en":"","channel_id":"2","name_en":""}]}
@@ -63,9 +59,9 @@ class ViewController: UIViewController {
     
     lazy var btn:UIButton = {
         let lBtn = UIButton()
-        lBtn.backgroundColor = .yellow
+        lBtn.backgroundColor = .black
         lBtn.frame = CGRect.init(x: 100, y: 100, width: 100, height: 60)
-        lBtn.setTitle("btn", for: .normal)
+        lBtn.setTitle("click me", for: .normal)
         return lBtn
     }()
 
