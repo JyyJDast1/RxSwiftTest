@@ -16,6 +16,12 @@ import RxCocoa
 
 class ViewController: UIViewController {
     let mnger = SessionManager.default
+    
+    lazy var obser0 = {
+        mnger.rx
+    .responseJSON(.get, "https://www.douban.com/j/app/radio/channels")
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,8 +37,7 @@ class ViewController: UIViewController {
      {"channels":[{"name_en":"Personal Radio","seq_id":0,"abbr_en":"My","name":"私人兆赫","channel_id":0},{"name":"华语","seq_id":0,"abbr_en":"","channel_id":"1","name_en":""},{"name":"欧美","seq_id":1,"abbr_en":"","channel_id":"2","name_en":""}]}
      */
     func downTest0() {
-     _ = mnger.rx
-            .responseJSON(.get, "https://www.douban.com/j/app/radio/channels")
+     _ = obser0
         .observeOn(MainScheduler.instance)
         .subscribe(onNext: {
 //            (res) in
@@ -56,6 +61,9 @@ class ViewController: UIViewController {
         })
     }
     
+    func downTestMap() {
+        //todo
+    }
     
     lazy var btn:UIButton = {
         let lBtn = UIButton()
