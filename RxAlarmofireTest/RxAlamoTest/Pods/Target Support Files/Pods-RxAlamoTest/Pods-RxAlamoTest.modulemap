@@ -1,0 +1,6 @@
+framework module Pods_RxAlamoTest {
+  umbrella header "Pods-RxAlamoTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

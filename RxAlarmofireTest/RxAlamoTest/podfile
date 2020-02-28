@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+
+target 'RxAlamoTest' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+pod 'RxAlamofire'
+pod 'RxCocoa'
+  # Pods for RxAlamoTest
+
+  target 'RxAlamoTestTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'RxAlamoTestUITests' do
+    # Pods for testing
+  end
+
+end
