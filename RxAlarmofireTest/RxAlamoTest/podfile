@@ -6,6 +6,7 @@ target 'RxAlamoTest' do
   use_frameworks!
 pod 'RxAlamofire'
 pod 'RxCocoa'
+pod 'HandyJSON'
   # Pods for RxAlamoTest
 
   target 'RxAlamoTestTests' do

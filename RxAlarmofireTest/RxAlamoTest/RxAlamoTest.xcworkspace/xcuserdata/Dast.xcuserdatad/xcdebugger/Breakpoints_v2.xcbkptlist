@@ -14,8 +14,8 @@
             filePath = "RxAlamoTest/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "downTest0()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,9 +30,57 @@
             filePath = "RxAlamoTest/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "downTest0()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "70B8F9B4-9777-4259-8450-9656E299A474 - b11434f9d315e901"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSHTTPURLResponse, Any) -&gt; () in RxAlamoTest.ViewController.downTest0() -&gt; ()"
+                  moduleName = "RxAlamoTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dast%201%202/Documents/github/RxSwiftTest/RxAlarmofireTest/RxAlamoTest/RxAlamoTest/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "1348">
+               </Location>
+               <Location
+                  uuid = "70B8F9B4-9777-4259-8450-9656E299A474 - b6358e0b27c9c490"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Error) -&gt; () in RxAlamoTest.ViewController.downTest0() -&gt; ()"
+                  moduleName = "RxAlamoTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dast%201%202/Documents/github/RxSwiftTest/RxAlarmofireTest/RxAlamoTest/RxAlamoTest/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CEB7B9B7-D3EE-4363-8401-35E2D1A72820"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxAlamoTest/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "downTestMap()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

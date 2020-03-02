@@ -29,7 +29,8 @@ class ViewController: UIViewController {
         view.addSubview(btn)
        _ = btn.rx.tap.asControlEvent()
             .subscribe { (eve) in
-                self.downTest0()
+//                self.downTest0()
+                self.downTestMap()
         }
     }
 
@@ -62,7 +63,31 @@ class ViewController: UIViewController {
     }
     
     func downTestMap() {
-        //todo
+       
+        _ = obser0.map({ (arg) -> Any in
+            let (_, json) = arg
+            
+            //todo:结合JSONKit实现只需声明MYMusicM结构体
+//            return json["channels"]
+            print(json)
+            return json
+        })
+            .mapModel(type: MYMusicResM.self)
+        .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { (musicResM) in
+                if let lArr = musicResM.channels{
+                    print("musicResM.channels:")
+                    print(lArr)
+                }
+            }, onError: { (err) in
+                print(err)
+            }, onCompleted: {
+                print("onCompleted")
+            }) {
+                
+        }
+            
+        
     }
     
     lazy var btn:UIButton = {

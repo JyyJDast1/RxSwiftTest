@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		C2E1F99324090B6A000F4818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E1F99124090B6A000F4818 /* LaunchScreen.storyboard */; };
 		C2E1F99E24090B6A000F4818 /* RxAlamoTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E1F99D24090B6A000F4818 /* RxAlamoTestTests.swift */; };
 		C2E1F9A924090B6A000F4818 /* RxAlamoTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E1F9A824090B6A000F4818 /* RxAlamoTestUITests.swift */; };
+		C2E1F9B7240CEDCA000F4818 /* HandyJsonRxMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E1F9B6240CEDCA000F4818 /* HandyJsonRxMap.swift */; };
+		C2E1F9B9240CF19B000F4818 /* MYMusicM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E1F9B8240CF19B000F4818 /* MYMusicM.swift */; };
+		C2E1F9BB240CF4F0000F4818 /* MYMusicResM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E1F9BA240CF4F0000F4818 /* MYMusicResM.swift */; };
 		CD0CFFC2D1F603AC44E8C0B1 /* Pods_RxAlamoTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA69F5361B05D1E9E6A3246A /* Pods_RxAlamoTestTests.framework */; };
 		F1D377EF11E892959CA91351 /* Pods_RxAlamoTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4DF7CB2B76E89B8F3577EA /* Pods_RxAlamoTest.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +61,9 @@
 		C2E1F9A424090B6A000F4818 /* RxAlamoTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxAlamoTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E1F9A824090B6A000F4818 /* RxAlamoTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAlamoTestUITests.swift; sourceTree = "<group>"; };
 		C2E1F9AA24090B6A000F4818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2E1F9B6240CEDCA000F4818 /* HandyJsonRxMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyJsonRxMap.swift; sourceTree = "<group>"; };
+		C2E1F9B8240CF19B000F4818 /* MYMusicM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MYMusicM.swift; sourceTree = "<group>"; };
+		C2E1F9BA240CF4F0000F4818 /* MYMusicResM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MYMusicResM.swift; sourceTree = "<group>"; };
 		CB1E3B35744AD9FF78DB88E7 /* Pods-RxAlamoTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxAlamoTestTests.debug.xcconfig"; path = "Target Support Files/Pods-RxAlamoTestTests/Pods-RxAlamoTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA079EB799B50EBBD6EAD32E /* Pods-RxAlamoTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxAlamoTest.release.xcconfig"; path = "Target Support Files/Pods-RxAlamoTest/Pods-RxAlamoTest.release.xcconfig"; sourceTree = "<group>"; };
 		EDF26F5E3A5D23299F288DF9 /* Pods-RxAlamoTest-RxAlamoTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxAlamoTest-RxAlamoTestUITests.release.xcconfig"; path = "Target Support Files/Pods-RxAlamoTest-RxAlamoTestUITests/Pods-RxAlamoTest-RxAlamoTestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +135,9 @@
 				C2E1F98624090B69000F4818 /* AppDelegate.swift */,
 				C2E1F98824090B69000F4818 /* SceneDelegate.swift */,
 				C2E1F98A24090B69000F4818 /* ViewController.swift */,
+				C2E1F9B6240CEDCA000F4818 /* HandyJsonRxMap.swift */,
+				C2E1F9BA240CF4F0000F4818 /* MYMusicResM.swift */,
+				C2E1F9B8240CF19B000F4818 /* MYMusicM.swift */,
 				C2E1F98C24090B69000F4818 /* Main.storyboard */,
 				C2E1F98F24090B6A000F4818 /* Assets.xcassets */,
 				C2E1F99124090B6A000F4818 /* LaunchScreen.storyboard */,
@@ -165,7 +174,6 @@
 				CB1E3B35744AD9FF78DB88E7 /* Pods-RxAlamoTestTests.debug.xcconfig */,
 				4D9618C224032EE58477307A /* Pods-RxAlamoTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -409,6 +417,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2E1F98B24090B69000F4818 /* ViewController.swift in Sources */,
+				C2E1F9B7240CEDCA000F4818 /* HandyJsonRxMap.swift in Sources */,
+				C2E1F9BB240CF4F0000F4818 /* MYMusicResM.swift in Sources */,
+				C2E1F9B9240CF19B000F4818 /* MYMusicM.swift in Sources */,
 				C2E1F98724090B69000F4818 /* AppDelegate.swift in Sources */,
 				C2E1F98924090B69000F4818 /* SceneDelegate.swift in Sources */,
 			);
