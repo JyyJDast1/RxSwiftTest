@@ -1,0 +1,6 @@
+framework module Pods_RxSwiftBiliBili_RxSwiftBiliBiliUITests {
+  umbrella header "Pods-RxSwiftBiliBili-RxSwiftBiliBiliUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
