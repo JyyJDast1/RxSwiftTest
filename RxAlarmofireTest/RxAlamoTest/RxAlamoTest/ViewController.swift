@@ -66,19 +66,15 @@ class ViewController: UIViewController {
        
         _ = obser0.map({ (arg) -> Any in
             let (_, json) = arg
-            
-            //todo:结合JSONKit实现只需声明MYMusicM结构体
-//            return json["channels"]
             print(json)
-            return json
+            let lJ = json as!  [String : Any]
+            return lJ["channels"] as Any
         })
-            .mapModel(type: MYMusicResM.self)
+            .mapModelArray(type: MYMusicM.self)
         .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { (musicResM) in
-                if let lArr = musicResM.channels{
-                    print("musicResM.channels:")
-                    print(lArr)
-                }
+            .subscribe(onNext: { (musicMArr) in
+                print("musicMArr:")
+                print(musicMArr)
             }, onError: { (err) in
                 print(err)
             }, onCompleted: {
