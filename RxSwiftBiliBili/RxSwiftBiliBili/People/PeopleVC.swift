@@ -16,7 +16,7 @@ class PeopleVC: UIViewController  {
     
     @IBOutlet weak var tableV: UITableView!
     
-    let peopleVM = PeopleViewModel()
+    var peopleVM = PeopleViewModel()
     let disposebag = DisposeBag()
     let reuseCellID = "PeopleViewCellID"
     
@@ -28,6 +28,17 @@ class PeopleVC: UIViewController  {
         //不加main.async时，会报警告：[TableView] Warning once only: UITableView was told to layout its visible cells and other contents without being in the view hierarchy
         DispatchQueue.main.async {
             self.bindData()
+        }
+        
+        //延迟更改数据源，观察界面是否变化
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.peopleVM.data = Observable.just([
+             People(name: "name5", age: 5)
+            ,People(name: "name6", age: 6)
+            ])
+            
+            //todo:why cannot update UI？？
+            self.tableV.reloadData()
         }
     }
 
