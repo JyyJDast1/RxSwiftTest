@@ -10,17 +10,36 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+struct YLVCModel {
+    let vcObj : UIViewController
+    let vcName : String
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    lazy var dataArr : [YLVCModel] = {
+        return [
+             YLVCModel(vcObj: PeopleVC.init(), vcName: "tableView")
+            ,YLVCModel(vcObj: ObservableVC.init(), vcName: "Observable")
+        ]
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = .yellow
         self.title = "首页"
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        tableView.selectRow(at: IndexPath(item: 1, section: 0), animated: true, scrollPosition: .top)
+        
+        tableView(tableView, didSelectRowAt: IndexPath(row: 1, section: 0))
     }
 }
 
@@ -29,18 +48,18 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return dataArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
-        cell.textLabel?.text = "tabelV"
+        cell.textLabel?.text = dataArr[indexPath.row].vcName
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let lVC = PeopleVC.init()
+        let lVC = dataArr[indexPath.row].vcObj
       self.navigationController?.pushViewController(lVC, animated: true)
     }
     

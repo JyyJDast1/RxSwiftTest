@@ -30,16 +30,22 @@ class PeopleVC: UIViewController  {
             self.bindData()
         }
         
-        //延迟更改数据源，观察界面是否变化
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.peopleVM.data = Observable.just([
-             People(name: "name5", age: 5)
-            ,People(name: "name6", age: 6)
-            ])
-            
-            //todo:why cannot update UI？？
-            self.tableV.reloadData()
-        }
+        testDataChange()
+    }
+    
+    
+
+    //todo:why cannot update UI？？
+    func testDataChange()  {
+            //延迟更改数据源，观察界面是否变化
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.peopleVM.data = Observable.just([
+                 People(name: "name5", age: 5)
+                ,People(name: "name6", age: 6)
+                ])
+                
+                self.tableV.reloadData()
+            }
     }
 
     func bindData()  {
