@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct People {
+    var name: String
+    var age: uint
+}

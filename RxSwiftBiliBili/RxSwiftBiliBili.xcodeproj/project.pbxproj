@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B1E31F43AFC8AA2F9B910A9E /* Pods_RxSwiftBiliBiliTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938967F992BC275DACD3932D /* Pods_RxSwiftBiliBiliTests.framework */; };
+		C265A7AE240F878000A5D369 /* PeopleVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C265A7AD240F878000A5D369 /* PeopleVC.xib */; };
 		C28F4947240E55A8005D9C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F4946240E55A8005D9C86 /* AppDelegate.swift */; };
 		C28F4949240E55A8005D9C86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F4948240E55A8005D9C86 /* SceneDelegate.swift */; };
 		C28F494B240E55A8005D9C86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F494A240E55A8005D9C86 /* ViewController.swift */; };
@@ -17,9 +18,7 @@
 		C28F495E240E55AB005D9C86 /* RxSwiftBiliBiliTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F495D240E55AB005D9C86 /* RxSwiftBiliBiliTests.swift */; };
 		C28F4969240E55AB005D9C86 /* RxSwiftBiliBiliUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F4968240E55AB005D9C86 /* RxSwiftBiliBiliUITests.swift */; };
 		C28F4978240E59D5005D9C86 /* PeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F4977240E59D5005D9C86 /* PeopleModel.swift */; };
-		C28F497A240E59E3005D9C86 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F4979240E59E3005D9C86 /* PeopleView.swift */; };
 		C28F497C240E59F1005D9C86 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F497B240E59F1005D9C86 /* PeopleViewModel.swift */; };
-		C28F497E240E5A26005D9C86 /* PeopleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28F497D240E5A26005D9C86 /* PeopleView.xib */; };
 		C28F4980240E5B1D005D9C86 /* PeopleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F497F240E5B1D005D9C86 /* PeopleVC.swift */; };
 		C32581798950C69B2A6979B6 /* Pods_RxSwiftBiliBili.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B5550DF5F71DC3A4A00190 /* Pods_RxSwiftBiliBili.framework */; };
 		E16C0C87F652F5D4637A0A52 /* Pods_RxSwiftBiliBili_RxSwiftBiliBiliUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F40117F35D7FC0A5ABC3EE6 /* Pods_RxSwiftBiliBili_RxSwiftBiliBiliUITests.framework */; };
@@ -51,6 +50,7 @@
 		61B5550DF5F71DC3A4A00190 /* Pods_RxSwiftBiliBili.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftBiliBili.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		920C2407C84C02ED580BC80A /* Pods-RxSwiftBiliBiliTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftBiliBiliTests.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftBiliBiliTests/Pods-RxSwiftBiliBiliTests.debug.xcconfig"; sourceTree = "<group>"; };
 		938967F992BC275DACD3932D /* Pods_RxSwiftBiliBiliTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftBiliBiliTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C265A7AD240F878000A5D369 /* PeopleVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleVC.xib; sourceTree = "<group>"; };
 		C28F4943240E55A8005D9C86 /* RxSwiftBiliBili.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftBiliBili.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28F4946240E55A8005D9C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28F4948240E55A8005D9C86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,9 +66,7 @@
 		C28F4968240E55AB005D9C86 /* RxSwiftBiliBiliUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftBiliBiliUITests.swift; sourceTree = "<group>"; };
 		C28F496A240E55AB005D9C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28F4977240E59D5005D9C86 /* PeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModel.swift; sourceTree = "<group>"; };
-		C28F4979240E59E3005D9C86 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		C28F497B240E59F1005D9C86 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
-		C28F497D240E5A26005D9C86 /* PeopleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleView.xib; sourceTree = "<group>"; };
 		C28F497F240E5B1D005D9C86 /* PeopleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleVC.swift; sourceTree = "<group>"; };
 		CF4B050030AA0078058A34C8 /* Pods-RxSwiftBiliBiliTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftBiliBiliTests.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftBiliBiliTests/Pods-RxSwiftBiliBiliTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,10 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				C28F4977240E59D5005D9C86 /* PeopleModel.swift */,
-				C28F4979240E59E3005D9C86 /* PeopleView.swift */,
-				C28F497D240E5A26005D9C86 /* PeopleView.xib */,
 				C28F497B240E59F1005D9C86 /* PeopleViewModel.swift */,
 				C28F497F240E5B1D005D9C86 /* PeopleVC.swift */,
+				C265A7AD240F878000A5D369 /* PeopleVC.xib */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -303,7 +300,7 @@
 				C28F4953240E55AB005D9C86 /* LaunchScreen.storyboard in Resources */,
 				C28F4950240E55AB005D9C86 /* Assets.xcassets in Resources */,
 				C28F494E240E55A8005D9C86 /* Main.storyboard in Resources */,
-				C28F497E240E5A26005D9C86 /* PeopleView.xib in Resources */,
+				C265A7AE240F878000A5D369 /* PeopleVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +432,6 @@
 				C28F497C240E59F1005D9C86 /* PeopleViewModel.swift in Sources */,
 				C28F4947240E55A8005D9C86 /* AppDelegate.swift in Sources */,
 				C28F4978240E59D5005D9C86 /* PeopleModel.swift in Sources */,
-				C28F497A240E59E3005D9C86 /* PeopleView.swift in Sources */,
 				C28F4980240E5B1D005D9C86 /* PeopleVC.swift in Sources */,
 				C28F4949240E55A8005D9C86 /* SceneDelegate.swift in Sources */,
 			);
