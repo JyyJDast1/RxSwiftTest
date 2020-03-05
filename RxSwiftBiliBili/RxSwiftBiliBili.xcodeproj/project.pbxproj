@@ -147,8 +147,8 @@
 		C28F4945240E55A8005D9C86 /* RxSwiftBiliBili */ = {
 			isa = PBXGroup;
 			children = (
-				C265A7AF240FACCF00A5D369 /* Observable */,
 				C28F4976240E59AF005D9C86 /* People */,
+				C265A7AF240FACCF00A5D369 /* Observable */,
 				C28F4946240E55A8005D9C86 /* AppDelegate.swift */,
 				C28F4948240E55A8005D9C86 /* SceneDelegate.swift */,
 				C28F494A240E55A8005D9C86 /* ViewController.swift */,
