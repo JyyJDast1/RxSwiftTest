@@ -17,7 +17,7 @@ class PeopleVC: UIViewController  {
     @IBOutlet weak var tableV: UITableView!
     
     var peopleVM = PeopleViewModel()
-    let disposebag = DisposeBag()
+    let ylDisposebag = DisposeBag()
     let reuseCellID = "PeopleViewCellID"
     
     override func viewDidLoad() {
@@ -31,9 +31,20 @@ class PeopleVC: UIViewController  {
         }
         
         testDataChange()
+        
+        selectCell()
     }
     
     
+    func selectCell() {
+        tableV.rx.itemSelected.subscribe(onNext:{ indexPath in
+            print(indexPath)
+        }).disposed(by: ylDisposebag)
+        
+        tableV.rx.modelSelected(People.self).subscribe(onNext: { (people) in
+            print(people)
+        }).disposed(by: ylDisposebag)
+    }
 
     //todo:why cannot update UI？？
     func testDataChange()  {
@@ -57,7 +68,7 @@ class PeopleVC: UIViewController  {
                 //detailTextLabel不显示，因为register的是系统cell，默认没有detailTextLabel。如果需要显示，必须自定义cell。（想不registerCell？会导致程序崩溃！）
                 cell.detailTextLabel?.text = "\(element.age)" + "岁"
         }
-        .disposed(by: disposebag)
+        .disposed(by: ylDisposebag)
          
     }
 }

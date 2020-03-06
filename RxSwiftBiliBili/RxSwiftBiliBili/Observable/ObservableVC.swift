@@ -22,7 +22,7 @@ class ObservableVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testObserver()
+//        testObserver()
     }
     
     //13种操作符

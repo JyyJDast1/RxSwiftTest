@@ -32,14 +32,12 @@ class ViewController: UIViewController {
         self.title = "首页"
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
+        
+        tableView(tableView, didSelectRowAt: IndexPath(row: 1, section: 0))
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-//        tableView.selectRow(at: IndexPath(item: 1, section: 0), animated: true, scrollPosition: .top)
-        
-        tableView(tableView, didSelectRowAt: IndexPath(row: 1, section: 0))
     }
 }
 
