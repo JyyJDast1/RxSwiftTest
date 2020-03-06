@@ -23,6 +23,41 @@ class ObservableVC: UIViewController {
         super.viewDidLoad()
         
 //        testObserver()
+        
+        testSubscribe()
+    }
+    
+    func testSubscribe(){
+        
+     
+        let obs0 = Observable.of("1", "2", "3")
+        
+        //method1
+        /*
+         log:
+         1
+         2
+         3
+         completed
+         disposed
+         */
+        obs0.subscribe(onNext: {
+            obj in
+            print(obj)
+        }, onError: { (err) in
+            print(err)
+        }, onCompleted: {
+            print("completed")
+        }) {
+            print("disposed")
+        }.disposed(by: ylDisposeBag)
+        
+        //method2
+        obs0.subscribe({event in
+            print(event)
+            //or
+            print(event.element as Any)
+        }).disposed(by: ylDisposeBag)
     }
     
     //13种操作符
@@ -31,9 +66,20 @@ class ObservableVC: UIViewController {
     //特殊：error, never, empty
     func testObserver(){
         let obs0 = Observable.of("1", "2", "3")
-        obs0.subscribe(onNext: { (str) in
-            print("obs0:" + str)
-        }).disposed(by: ylDisposeBag)
+        
+//        obs0.subscribe(onNext: { (str) in
+//            print("obs0:" + str)
+//        }).disposed(by: ylDisposeBag)
+        obs0.subscribe(onNext: {
+            obj in
+            print(obj)
+        }, onError: { (err) in
+            print(err)
+        }, onCompleted: {
+            print("completed")
+        }) {
+            print("disposed")
+        }.disposed(by: ylDisposeBag)
         
         obs0.subscribe(onNext: { (str) in
             print("obs0_1:" + str)
