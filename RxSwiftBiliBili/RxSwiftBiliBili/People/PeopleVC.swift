@@ -35,6 +35,9 @@ class PeopleVC: UIViewController  {
         selectCell()
     }
     
+    deinit {
+        print("deinit")
+    }
     
     func selectCell() {
         tableV.rx.itemSelected.subscribe(onNext:{ indexPath in

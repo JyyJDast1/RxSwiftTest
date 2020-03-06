@@ -11,6 +11,7 @@
 		C265A7AE240F878000A5D369 /* PeopleVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C265A7AD240F878000A5D369 /* PeopleVC.xib */; };
 		C265A7B1240FACF300A5D369 /* ObservableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C265A7B0240FACF300A5D369 /* ObservableVC.swift */; };
 		C265A7B3240FAD0200A5D369 /* ObservableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C265A7B2240FAD0200A5D369 /* ObservableVC.xib */; };
+		C26EAE7A24122AC40007C129 /* DoOnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EAE7924122AC30007C129 /* DoOnVC.swift */; };
 		C28F4947240E55A8005D9C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F4946240E55A8005D9C86 /* AppDelegate.swift */; };
 		C28F4949240E55A8005D9C86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F4948240E55A8005D9C86 /* SceneDelegate.swift */; };
 		C28F494B240E55A8005D9C86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F494A240E55A8005D9C86 /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		C265A7AD240F878000A5D369 /* PeopleVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleVC.xib; sourceTree = "<group>"; };
 		C265A7B0240FACF300A5D369 /* ObservableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableVC.swift; sourceTree = "<group>"; };
 		C265A7B2240FAD0200A5D369 /* ObservableVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservableVC.xib; sourceTree = "<group>"; };
+		C26EAE7924122AC30007C129 /* DoOnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoOnVC.swift; sourceTree = "<group>"; };
 		C28F4943240E55A8005D9C86 /* RxSwiftBiliBili.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftBiliBili.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28F4946240E55A8005D9C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28F4948240E55A8005D9C86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,14 @@
 			path = Observable;
 			sourceTree = "<group>";
 		};
+		C26EAE7824122AB30007C129 /* DoOn */ = {
+			isa = PBXGroup;
+			children = (
+				C26EAE7924122AC30007C129 /* DoOnVC.swift */,
+			);
+			path = DoOn;
+			sourceTree = "<group>";
+		};
 		C28F493A240E55A8005D9C86 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +159,7 @@
 			children = (
 				C28F4976240E59AF005D9C86 /* People */,
 				C265A7AF240FACCF00A5D369 /* Observable */,
+				C26EAE7824122AB30007C129 /* DoOn */,
 				C28F4946240E55A8005D9C86 /* AppDelegate.swift */,
 				C28F4948240E55A8005D9C86 /* SceneDelegate.swift */,
 				C28F494A240E55A8005D9C86 /* ViewController.swift */,
@@ -444,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C26EAE7A24122AC40007C129 /* DoOnVC.swift in Sources */,
 				C28F494B240E55A8005D9C86 /* ViewController.swift in Sources */,
 				C265A7B1240FACF300A5D369 /* ObservableVC.swift in Sources */,
 				C28F497C240E59F1005D9C86 /* PeopleViewModel.swift in Sources */,

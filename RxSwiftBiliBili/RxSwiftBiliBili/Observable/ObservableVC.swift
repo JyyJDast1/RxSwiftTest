@@ -27,6 +27,10 @@ class ObservableVC: UIViewController {
         testSubscribe()
     }
     
+    deinit {
+        print("deinit")
+    }
+    
     func testSubscribe(){
         
      

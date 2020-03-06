@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         return [
              YLVCModel(vcObj: PeopleVC.init(), vcName: "tableView")
             ,YLVCModel(vcObj: ObservableVC.init(), vcName: "Observable")
+             ,YLVCModel(vcObj: DoOnVC.init(), vcName: "DoOn")
         ]
     }()
     
@@ -33,7 +34,7 @@ class ViewController: UIViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
         
-        tableView(tableView, didSelectRowAt: IndexPath(row: 1, section: 0))
+//        tableView(tableView, didSelectRowAt: IndexPath(row: 1, section: 0))
     }
     
     override func viewDidAppear(_ animated: Bool) {
