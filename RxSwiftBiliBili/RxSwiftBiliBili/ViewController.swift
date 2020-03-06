@@ -21,9 +21,10 @@ class ViewController: UIViewController {
     
     lazy var dataArr : [YLVCModel] = {
         return [
-             YLVCModel(vcObj: PeopleVC.init(), vcName: "tableView")
+             YLVCModel(vcObj: PeopleVC.init(), vcName: "TableView")
             ,YLVCModel(vcObj: ObservableVC.init(), vcName: "Observable")
-             ,YLVCModel(vcObj: DoOnVC.init(), vcName: "DoOn")
+            ,YLVCModel(vcObj: DoOnVC.init(), vcName: "DoOn")
+            ,YLVCModel(vcObj: DisposeVC.init(), vcName: "Dispose")
         ]
     }()
     
