@@ -40,4 +40,8 @@ class DisposeVC: UIViewController {
         //销毁方法二：
         res.disposed(by: ylDisBag)
     }
+    
+    deinit {
+        print("dead")
+    }
 }

@@ -11,20 +11,21 @@ import RxSwift
 import RxCocoa
 
 struct YLVCModel {
-    let vcObj : UIViewController
-    let vcName : String
+    var classType : UIViewController.Type?
+    var title : String = "title"
 }
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     lazy var dataArr : [YLVCModel] = {
         return [
-             YLVCModel(vcObj: PeopleVC.init(), vcName: "TableView")
-            ,YLVCModel(vcObj: ObservableVC.init(), vcName: "Observable")
-            ,YLVCModel(vcObj: DoOnVC.init(), vcName: "DoOn")
-            ,YLVCModel(vcObj: DisposeVC.init(), vcName: "Dispose")
+            YLVCModel(classType: PeopleVC.self, title: "tableV")
+            ,YLVCModel(classType: ObservableVC.self, title: "Observable")
+            ,YLVCModel(classType: DoOnVC.self, title: "DoOn")
+            ,YLVCModel(classType: DisposeVC.self, title: "Dispose")
+            ,YLVCModel(classType: BindToVC.self, title: "BindTo")
         ]
     }()
     
@@ -35,7 +36,7 @@ class ViewController: UIViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
         
-//        tableView(tableView, didSelectRowAt: IndexPath(row: 1, section: 0))
+        //        tableView(tableView, didSelectRowAt: IndexPath(row: 1, section: 0))
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,14 +54,18 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
-        cell.textLabel?.text = dataArr[indexPath.row].vcName
+//        cell.textLabel?.text = dataArr[indexPath.row].classType?.description()
+        cell.textLabel?.text = dataArr[indexPath.row].title
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let lVC = dataArr[indexPath.row].vcObj
-      self.navigationController?.pushViewController(lVC, animated: true)
+        let lVCType = dataArr[indexPath.row].classType
+        if let lVC = lVCType{
+            let lVC = lVC.init()
+            self.navigationController?.pushViewController(lVC, animated: true)
+        }
     }
     
 }
