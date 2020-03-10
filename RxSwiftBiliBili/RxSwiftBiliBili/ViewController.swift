@@ -27,6 +27,8 @@ class ViewController: UIViewController {
             ,YLVCModel(classType: DisposeVC.self, title: "Dispose")
             ,YLVCModel(classType: BindToVC.self, title: "BindTo")
             ,YLVCModel(classType: ExtensionVC.self, title: "Extension")
+            ,YLVCModel(classType: SubjectVC.self, title: "Subject")
+            
         ]
     }()
     

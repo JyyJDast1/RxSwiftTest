@@ -28,6 +28,7 @@
 		C28F4980240E5B1D005D9C86 /* PeopleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F497F240E5B1D005D9C86 /* PeopleVC.swift */; };
 		C2B76388241782920025202A /* ExtensionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B76387241782920025202A /* ExtensionVC.swift */; };
 		C2B7638A241783EB0025202A /* ExtensionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2B76389241783EB0025202A /* ExtensionVC.xib */; };
+		C2B7638D2417994B0025202A /* SubjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B7638C2417994B0025202A /* SubjectVC.swift */; };
 		C32581798950C69B2A6979B6 /* Pods_RxSwiftBiliBili.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B5550DF5F71DC3A4A00190 /* Pods_RxSwiftBiliBili.framework */; };
 		E16C0C87F652F5D4637A0A52 /* Pods_RxSwiftBiliBili_RxSwiftBiliBiliUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F40117F35D7FC0A5ABC3EE6 /* Pods_RxSwiftBiliBili_RxSwiftBiliBiliUITests.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,7 @@
 		C28F497F240E5B1D005D9C86 /* PeopleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleVC.swift; sourceTree = "<group>"; };
 		C2B76387241782920025202A /* ExtensionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionVC.swift; sourceTree = "<group>"; };
 		C2B76389241783EB0025202A /* ExtensionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtensionVC.xib; sourceTree = "<group>"; };
+		C2B7638C2417994B0025202A /* SubjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectVC.swift; sourceTree = "<group>"; };
 		CF4B050030AA0078058A34C8 /* Pods-RxSwiftBiliBiliTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftBiliBiliTests.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftBiliBiliTests/Pods-RxSwiftBiliBiliTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +192,7 @@
 				C26EAE7B241238E40007C129 /* Dispose */,
 				C26EAE7E24124D270007C129 /* Bindto */,
 				C2B76386241782750025202A /* ExtensionVC */,
+				C2B7638B241798CC0025202A /* Subject */,
 				C28F4946240E55A8005D9C86 /* AppDelegate.swift */,
 				C28F4948240E55A8005D9C86 /* SceneDelegate.swift */,
 				C28F494A240E55A8005D9C86 /* ViewController.swift */,
@@ -237,6 +240,14 @@
 				C2B76389241783EB0025202A /* ExtensionVC.xib */,
 			);
 			path = ExtensionVC;
+			sourceTree = "<group>";
+		};
+		C2B7638B241798CC0025202A /* Subject */ = {
+			isa = PBXGroup;
+			children = (
+				C2B7638C2417994B0025202A /* SubjectVC.swift */,
+			);
+			path = Subject;
 			sourceTree = "<group>";
 		};
 		E0928364BB0BF39D1A7B4F7F /* Pods */ = {
@@ -499,6 +510,7 @@
 				C2B76388241782920025202A /* ExtensionVC.swift in Sources */,
 				C26EAE7A24122AC40007C129 /* DoOnVC.swift in Sources */,
 				C28F494B240E55A8005D9C86 /* ViewController.swift in Sources */,
+				C2B7638D2417994B0025202A /* SubjectVC.swift in Sources */,
 				C26EAE7D241238F50007C129 /* DisposeVC.swift in Sources */,
 				C265A7B1240FACF300A5D369 /* ObservableVC.swift in Sources */,
 				C28F497C240E59F1005D9C86 /* PeopleViewModel.swift in Sources */,
