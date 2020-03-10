@@ -25,7 +25,7 @@ class BindToVC: UIViewController {
         //The print() function is actually variadic, so you can pass it more than one parameter and it will print them all, like this:
 //        print(1,"2", 3, 4)
         
-        testAnyOberver()
+//        testAnyOberver()
         testBinder()
     }
     
@@ -39,8 +39,8 @@ class BindToVC: UIViewController {
             case .next(let text):
 //                print(text)
                 self?.textLbl.text = text
-                //                case .error(_):
-                //
+            case .error(let err):
+                print(err)
             //                case .completed:
             default:
                 return
@@ -48,13 +48,19 @@ class BindToVC: UIViewController {
         }
         
         gObserable
-            .map { "计数器:\($0)"
-        }
+        .map { "计数器:\($0)"}
         .bind(to: lObserver)
         .disposed(by: ylDisBag)
     }
     
     func testBinder(){
+        let lBinder = Binder.init(self.textLbl) { (lbl, text) in
+            lbl.text = text;
+        }
         
+        gObserable.map { (num) -> String in
+            return "counter:\(num)"
+        }.bind(to: lBinder)
+        .disposed(by: ylDisBag)
     }
 }

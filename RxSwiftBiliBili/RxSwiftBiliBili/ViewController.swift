@@ -26,6 +26,7 @@ class ViewController: UIViewController {
             ,YLVCModel(classType: DoOnVC.self, title: "DoOn")
             ,YLVCModel(classType: DisposeVC.self, title: "Dispose")
             ,YLVCModel(classType: BindToVC.self, title: "BindTo")
+            ,YLVCModel(classType: ExtensionVC.self, title: "Extension")
         ]
     }()
     
