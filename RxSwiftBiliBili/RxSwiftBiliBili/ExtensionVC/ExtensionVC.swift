@@ -23,7 +23,7 @@ class ExtensionVC: UIViewController {
     
     func test() {
         
-        let lSig = Observable<Int>.interval(.milliseconds(500), scheduler: MainScheduler.init())
+        let lSig = Observable<UInt>.interval(.milliseconds(500), scheduler: MainScheduler.init())
         
         lSig.map{
             CGFloat($0)
