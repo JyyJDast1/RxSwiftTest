@@ -26,7 +26,10 @@ class SubjectVC: UIViewController {
         //如果源 Observable 因为产生了一个 error 事件而中止， BehaviorSubject 就不会发出任何元素，而是将这个 error 事件发送出来。
         //        testBehaviorSubError()
         
-        testReplaySub()
+                testReplaySub()
+        
+        //Variable已废弃
+//        testVariable()
     }
     
     func testPublishSub() {
@@ -245,6 +248,37 @@ class SubjectVC: UIViewController {
          3st  completed
          */
     }
+    
+    func testVariable(){
+        let lVa = Variable.init(1)
+        
+        lVa.value = 2
+        
+        lVa.asObservable().subscribe { (event) in
+            print("1st ",event)
+        }.disposed(by: ylDisBag)
+        
+        lVa.value = 3
+        
+        lVa.asObservable().subscribe { (event) in
+            print("2st ",event)
+        }.disposed(by: ylDisBag)
+        
+        lVa.value = 4
+        
+        print("lVa.value:", lVa.value)
+        
+        /*log:
+         1st  next(2)
+         1st  next(3)
+         2st  next(3)
+         1st  next(4)
+         2st  next(4)
+         1st  completed
+         2st  completed
+         */
+    }
+    
     deinit{
         print("vc dead")
     }
